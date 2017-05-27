@@ -1,0 +1,10 @@
+# Ignore
+
+.idea
+Icons/*
+IconsNew/*
+
+# But not
+
+!Icons/Jeans_Work_2.png
+!IconsNew/2.png
