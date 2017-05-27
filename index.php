@@ -1,22 +1,30 @@
 <?php
 
 /**
+ * @var string $dirInput
+ * @var string $dirOutput
+ *
  * Config Input and Output image files directory
- * Starter Point (function call main)
  */
 
 $dirInput = 'Icons';
 $dirOutput = 'IconsNew';
 
-main();
+/*
+ * Starter Point (function call main)
+ */
+
+main($dirInput, $dirOutput);
 
 /**
+ * @param $dirInput
+ *
  * Main function for
  *   Change file name to ID,
  *   Copy file to new output directory
  */
 
-function main(){
+function main($dirInput){
     $fileInput = scandir($dirInput);
     for($i=2;$i<count($fileInput);$i++){
         $fileOutput = covertNameToID($fileInput[$i]);
