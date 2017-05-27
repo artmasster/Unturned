@@ -22,7 +22,7 @@
 
 ใน index.php
 
-~~~php
+~~~ php
 // โฟเดอร์ตั้งต้นของไฟล์รูปภาพ
 $dirInput = 'Icons';
 
@@ -32,4 +32,4 @@ $dirOutput = 'IconsNew';
 
 ### Cradit
 
-* GSV.IN.th (Art_Masster)
+* GSV.IN.TH (Art_Masster)
