@@ -14,10 +14,11 @@ $dirOutput = 'IconsNew';
  * Starter Point (function call main)
  */
 
-main($dirInput, $dirOutput);
+echo main($dirInput);
 
 /**
  * @param $dirInput
+ * @return string -- return result
  *
  * Main function for
  *   Change file name to ID,
@@ -30,7 +31,7 @@ function main($dirInput){
         $fileOutput = covertNameToID($fileInput[$i]);
         convertCopyFile($fileInput[$i], $fileOutput);
     }
-    echo 'Finished!!';
+    return 'Finished!!';
 }
 
 /**
@@ -61,8 +62,6 @@ function convertCopyFile($fileInput, $fileOutput){
     $dirInputRes = $dirInput.'/'.$fileInput;
     $dirOutputRes = $dirOutput.'/'.$fileOutput;
     copy($dirInputRes, $dirOutputRes);
-    echo 'Convert '.$dirInputRes.' to '.$dirOutputRes.'<br />';
+    echo 'Convert '.$dirInputRes.' ==> '.$dirOutputRes.'<br />';
     return 0;
 }
-
-?>
