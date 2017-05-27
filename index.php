@@ -1,13 +1,14 @@
 <?php
 
 /**
- * Config Directory I/O
+ * Config Input and Output image files directory
+ * Starter Point (function call main)
  */
 
 $dirInput = 'Icons';
 $dirOutput = 'IconsNew';
 
-$fileInput = scandir($dirInput);
+main();
 
 /**
  * Main function for
@@ -15,9 +16,13 @@ $fileInput = scandir($dirInput);
  *   Copy file to new output directory
  */
 
-for($i=2;$i<count($fileInput);$i++){
-    $fileOutput = covertNameToID($fileInput[$i]);
-    convertCopyFile($fileInput[$i], $fileOutput);
+function main(){
+    $fileInput = scandir($dirInput);
+    for($i=2;$i<count($fileInput);$i++){
+        $fileOutput = covertNameToID($fileInput[$i]);
+        convertCopyFile($fileInput[$i], $fileOutput);
+    }
+    echo 'Finished!!';
 }
 
 /**
