@@ -3,7 +3,7 @@
 /**
  * @var string $dirInput
  * @var string $dirOutput
- *
+ * 
  * Config Input and Output image files directory
  */
 
