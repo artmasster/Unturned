@@ -1,6 +1,12 @@
 # Unturned Convert Item Picture
 
-โปรแกรม PHP ที่จะช่วยให้คุณสามารถแปลงชื่อไฟล์รูปภาพของ Item ในเกม Unturned หลายๆไฟล์ให้เหลือเพียงแค่ตัวเลขเฉยๆได้ในครั้งเดียว
+## ปัญหา?
+
+เนื่องจากเกม [Unturned](http://store.steampowered.com/app/304930/Unturned/) จะมีภาพของ item ต่างๆแยกมาให้ในตัวเกม ผู้พัทนาต่างก็สามารถเอาไปใช้งานได้ แต่มีปัญหาว่า ไฟล์ของภาพนั้นประกอบไปด้วยตัวเลข ซึงเป็น Item ID และชื่อของ Item นั้นๆอยู่ด้วยทำให้ยากแก่การทำมาใช้านตามปกติ
+
+### ทางออก!
+
+โปรแกรม PHP ที่จะช่วยให้คุณสามารถแปลงชื่อไฟล์รูปภาพของ Item ในเกม [Unturned](http://store.steampowered.com/app/304930/Unturned/) หลายๆไฟล์ให้เหลือเพียงแค่ตัวเลขเฉยๆได้ในครั้งเดียว
 เพื่อสามารถนำภาพที่ได้ไปใช้ในการทำระบบอื่นต่อไปได้ง่ายขึ้น
 
 ### ตัวอย่าง
@@ -9,18 +15,18 @@
     
 ### โปรแกรมที่จำเป็น
      
-* Apache หรือ Software อื่นๆที่สามารถรัน PHP ได้ (AppServ,WampServer,XAMPP)
+* [Apache](https://httpd.apache.org/) หรือ Software อื่นๆที่สามารถรัน PHP ได้ ([AppServ](https://www.appserv.org/th/),[WampServer](http://www.wampserver.com/en/),[XAMPP](https://www.apachefriends.org/))
     
 ### วิธีใช้งาน
 
-1. คัดลอกไฟล์ภาพจากตัวเกม Unturned (...\Unturned\Extras\Icons\...)
+1. คัดลอกไฟล์ภาพจากตัวเกม [Unturned](http://store.steampowered.com/app/304930/Unturned/) (...\Unturned\Extras\Icons\*.png)
 2. นำไปใส่ใว้ที่โฟเดอร์ Icons ในโปรแกรม (หรือตามแต่ที่ตั่งค่าใว้)
-3. ทำการรันโปรแกรมด้วย Apache หรือ Software อื่นๆที่สามารถรัน PHP ได้
+3. ทำการรันโปรแกรมด้วย [Apache](https://httpd.apache.org/) หรือ Software อื่นๆที่สามารถรัน PHP ได้
 4. ไฟล์ที่ถูกแก้ใขชื่อแล้วจะอยู่ในโฟเดอร์ IconsNew ในโปรแกรม (หรือตามแต่ที่ตั่งค่าใว้)
 
 ### การตั่งค่า
 
-ใน index.php
+ใน [index.php](./index.php)
 
 ~~~ php
 // โฟเดอร์ตั้งต้นของไฟล์รูปภาพ
@@ -32,4 +38,4 @@ $dirOutput = 'IconsNew';
 
 ### Cradit
 
-* GSV.IN.TH (Art_Masster)
+* [GSV.IN.TH](http://gsv.in.th/) [(Art_Masster)](http://ddut.gsv.in.th/)
